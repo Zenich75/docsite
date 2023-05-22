@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Filament\Resources\ConfirmationResource\Pages;
+
+use App\Filament\Resources\ConfirmationResource;
+use Filament\Pages\Actions;
+use Filament\Resources\Pages\ListRecords;
+
+class ListConfirmations extends ListRecords
+{
+    protected static string $resource = ConfirmationResource::class;
+
+    protected function getActions(): array
+    {
+        return [
+            Actions\CreateAction::make(),
+        ];
+    }
+}
