@@ -40,6 +40,14 @@ class UserResource extends Resource
                     ->maxLength(255)
                     ->dehydrated(fn ($state) => filled($state))
                     ->required(fn (string $context): bool => $context === 'create'),
+                Forms\Components\Select::make('role')
+                    ->options([
+                        'user' => 'User',
+                        'chief' => 'Chief',
+                    ])
+                    ->default('user')
+                    ->disablePlaceholderSelection()
+                    ->label('Role (Chief can see statistics tab)'),
             ]);
     }
 

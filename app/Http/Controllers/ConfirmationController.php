@@ -48,7 +48,6 @@ class ConfirmationController extends Controller
         return redirect()->back();
     }
 
-
     /**
      * Show the form for creating a new resource.
      */
